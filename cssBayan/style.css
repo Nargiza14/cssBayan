@@ -21,12 +21,38 @@ html {
   cursor: pointer;
   color: blue;
 }
-.bayan:hover {
-  color: black;
-}
 .bayan_label {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   padding: 1rem 2rem;
   font-weight: 900;
   cursor: pointer;
+}
+.plus {
+  display: block;
+}
+.bayan:hover {
+  color: black;
+}
+.bayan_mem {
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+.bayan_mem img {
+  width: 25rem;
+  height: auto;
+}
+.bayan_input {
+  display: none;
+}
+.bayan_input:checked ~ .bayan_mem {
+  display: flex;
+}
+.bayan_input:checked ~ .plus {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transition: 0.1s;
+  display: inline-block;
 }
