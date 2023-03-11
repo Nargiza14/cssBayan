@@ -68,3 +68,6 @@ html {
   transform: rotate(45deg);
   transition: 0.5s;
 }
+.bayan_input:checked ~ .bayan_label {
+  color: black;
+}
