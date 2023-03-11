@@ -1,47 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,500&display=swap");
 
+.bayan:hover .option:hover .bayan_mem,
+.bayan .option--default .bayan_mem {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.bayan_mem,
+.bayan:hover .bayan_mem {
+  display: flex;
+  justify-content: center;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s;
+}
+
 *,
 body {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: "Lora", serif;
 }
 body {
   background-color: beige;
   min-height: 100vh;
-  padding: 5% 15%;
+  padding: 5% 20%;
 }
 html {
   scroll-behavior: smooth;
 }
 .bayan {
-  max-width: 35rem;
-  overflow: hidden;
+  max-width: 100%;
   cursor: pointer;
   color: blue;
-}
-.bayan_label {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  font-weight: 900;
-  cursor: pointer;
-}
-
-.icon {
-  display: block;
 }
 .bayan:hover {
   color: black;
 }
-.bayan_mem {
+.option {
+  border-top-style: ridge;
+}
+.bayan_label {
   display: flex;
-  justify-content: center;
-  display: none;
+  justify-content: space-between;
+  padding: 1rem 0;
+  font-weight: 900;
+  cursor: pointer;
 }
 .bayan_mem img {
-  width: 25rem;
+  width: 15rem;
   height: auto;
 }
 .bayan_input {
@@ -49,8 +56,15 @@ html {
 }
 .bayan_input:checked ~ .bayan_mem {
   display: flex;
+  justify-content: center;
+  height: 100%;
 }
 .bayan_input:checked ~ .bayan_label img {
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+.bayan:hover .option:hover .bayan_label img,
+.bayan .option--default .bayan_label img {
   transform: rotate(45deg);
   transition: 0.5s;
 }
