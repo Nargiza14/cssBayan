@@ -28,7 +28,8 @@ html {
   font-weight: 900;
   cursor: pointer;
 }
-.plus {
+
+.icon {
   display: block;
 }
 .bayan:hover {
@@ -49,10 +50,7 @@ html {
 .bayan_input:checked ~ .bayan_mem {
   display: flex;
 }
-.bayan_input:checked ~ .plus {
+.bayan_input:checked ~ .bayan_label img {
   transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transition: 0.1s;
-  display: inline-block;
+  transition: 0.5s;
 }
