@@ -15,6 +15,9 @@
   overflow: hidden;
   transition: height 0.3s;
 }
+.bayan:not(:hover) .bayan_label img {
+  opacity: 0;
+}
 
 *,
 body {
@@ -24,7 +27,8 @@ body {
 body {
   background-color: beige;
   min-height: 100vh;
-  padding: 5% 20%;
+  padding: 3% 10%;
+  font-size: small;
 }
 html {
   scroll-behavior: smooth;
@@ -43,8 +47,9 @@ html {
 .bayan_label {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 0;
-  font-weight: 900;
+  padding: 0.5rem 0;
+  font-weight: 400;
+  font-size: 0.5em;
   cursor: pointer;
 }
 .bayan_mem img {
@@ -70,4 +75,32 @@ html {
 }
 .bayan_input:checked ~ .bayan_label {
   color: black;
+}
+
+@media screen and (min-width: 51.25em) {
+  .body {
+    padding: 5% 25%;
+  }
+  .bayan_label {
+    padding: 1rem 0;
+    font-weight: 600;
+    font-size: 1.2em;
+  }
+  .bayan_mem img {
+    width: 20rem;
+  }
+}
+
+@media screen and (min-width: 120em) {
+  .body {
+    padding: 10% 35%;
+  }
+  .bayan_label {
+    padding: 1rem 0;
+    font-weight: 900;
+    font-size: 1.6em;
+  }
+  .bayan_mem img {
+    width: 25rem;
+  }
 }
