@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,500&display=swap");
+
+.bayan:hover .option:hover .bayan_mem,
+.bayan .option--default .bayan_mem {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: 1s;
+}
+
+.bayan_mem,
+.bayan:hover .bayan_mem {
+  display: flex;
+  justify-content: center;
+  height: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+.bayan:not(:hover) .bayan_label img {
+  opacity: 0;
+}
+
+*,
+body {
+  box-sizing: border-box;
+  font-family: "Lora", serif;
+}
+body {
+  background-color: beige;
+  min-height: 100vh;
+  padding: 3% 10%;
+  font-size: small;
+}
+html {
+  scroll-behavior: smooth;
+}
+.bayan {
+  max-width: 100%;
+  cursor: pointer;
+  color: blue;
+}
+.bayan:hover {
+  color: black;
+}
+.option {
+  border-top-style: ridge;
+}
+.bayan_label {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  font-weight: 400;
+  font-size: 0.5em;
+  cursor: pointer;
+}
+.bayan_mem img {
+  width: 15rem;
+  height: auto;
+}
+.bayan_input {
+  display: none;
+}
+.bayan_input:checked ~ .bayan_mem {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: 0.4s;
+}
+.bayan_input:checked ~ .bayan_label img {
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+.bayan:hover .option:hover .bayan_label img,
+.bayan .option--default .bayan_label img {
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+.bayan_input:checked ~ .bayan_label {
+  color: black;
+}
+
+@media screen and (min-width: 51.25em) {
+  .body {
+    padding: 5% 25%;
+  }
+  .bayan_label {
+    padding: 1rem 0;
+    font-weight: 600;
+    font-size: 1.2em;
+  }
+  .bayan_mem img {
+    width: 20rem;
+  }
+}
+
+@media screen and (min-width: 120em) {
+  .body {
+    padding: 10% 35%;
+  }
+  .bayan_label {
+    padding: 1rem 0;
+    font-weight: 900;
+    font-size: 1.6em;
+  }
+  .bayan_mem img {
+    width: 25rem;
+  }
+}
